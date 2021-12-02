@@ -1,0 +1,16 @@
+C:\Users\Егор\source\repos\myproject\myproject\bin\Debug\myproject.exe.config
+C:\Users\Егор\source\repos\myproject\myproject\bin\Debug\myproject.exe
+C:\Users\Егор\source\repos\myproject\myproject\bin\Debug\myproject.pdb
+C:\Users\Егор\source\repos\myproject\myproject\bin\Debug\MaterialSkin.dll
+C:\Users\Егор\source\repos\myproject\myproject\obj\Debug\myproject.csprojAssemblyReference.cache
+C:\Users\Егор\source\repos\myproject\myproject\obj\Debug\myproject.Form1.resources
+C:\Users\Егор\source\repos\myproject\myproject\obj\Debug\myproject.Properties.Resources.resources
+C:\Users\Егор\source\repos\myproject\myproject\obj\Debug\myproject.csproj.GenerateResource.cache
+C:\Users\Егор\source\repos\myproject\myproject\obj\Debug\myproject.csproj.CoreCompileInputs.cache
+C:\Users\Егор\source\repos\myproject\myproject\obj\Debug\myproject.csproj.CopyComplete
+C:\Users\Егор\source\repos\myproject\myproject\obj\Debug\myproject.exe
+C:\Users\Егор\source\repos\myproject\myproject\obj\Debug\myproject.pdb
+C:\Users\Егор\source\repos\myproject\myproject\obj\Debug\myproject.Formnewobsl.resources
+C:\Users\Егор\source\repos\myproject\myproject\obj\Debug\myproject.Formsensor.resources
+C:\Users\Егор\source\repos\myproject\myproject\obj\Debug\myproject.Formadmin.resources
+C:\Users\Егор\source\repos\myproject\myproject\obj\Debug\myproject.Formgrafic.resources
