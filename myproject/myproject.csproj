@@ -50,54 +50,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Form1Model.cs" />
     <Compile Include="Presenters\Form1Presenter.cs" />
-    <Compile Include="Presenters\FormAdminPresenter.cs" />
-    <Compile Include="Presenters\ViewPresenterBase.cs" />
-    <Compile Include="View\Form1.cs">
+    <Compile Include="Views\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Form1.Designer.cs">
+    <Compile Include="Views\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Formadmin.cs">
+    <Compile Include="Views\Formadmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Formadmin.Designer.cs">
+    <Compile Include="Views\Formadmin.Designer.cs">
       <DependentUpon>Formadmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Formgrafic.cs">
+    <Compile Include="Views\Formgrafic.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Formgrafic.Designer.cs">
+    <Compile Include="Views\Formgrafic.Designer.cs">
       <DependentUpon>Formgrafic.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Formnewobsl.cs">
+    <Compile Include="Views\Formnewobsl.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Formnewobsl.Designer.cs">
+    <Compile Include="Views\Formnewobsl.Designer.cs">
       <DependentUpon>Formnewobsl.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Formsensor.cs">
+    <Compile Include="Views\Formsensor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Formsensor.Designer.cs">
+    <Compile Include="Views\Formsensor.Designer.cs">
       <DependentUpon>Formsensor.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="View\Form1.resx">
+    <Compile Include="Views\IForm1.cs" />
+    <EmbeddedResource Include="Views\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Formadmin.resx">
+    <EmbeddedResource Include="Views\Formadmin.resx">
       <DependentUpon>Formadmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Formgrafic.resx">
+    <EmbeddedResource Include="Views\Formgrafic.resx">
       <DependentUpon>Formgrafic.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Formnewobsl.resx">
+    <EmbeddedResource Include="Views\Formnewobsl.resx">
       <DependentUpon>Formnewobsl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Formsensor.resx">
+    <EmbeddedResource Include="Views\Formsensor.resx">
       <DependentUpon>Formsensor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -109,7 +109,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="View\packages.config" />
+    <None Include="Views\packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
