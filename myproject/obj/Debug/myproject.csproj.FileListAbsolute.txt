@@ -14,3 +14,5 @@ C:\Users\Егор\source\repos\myproject\myproject\obj\Debug\myproject.Formnewob
 C:\Users\Егор\source\repos\myproject\myproject\obj\Debug\myproject.Formsensor.resources
 C:\Users\Егор\source\repos\myproject\myproject\obj\Debug\myproject.Formadmin.resources
 C:\Users\Егор\source\repos\myproject\myproject\obj\Debug\myproject.Formgrafic.resources
+C:\Users\Егор\source\repos\myproject\myproject\bin\Debug\Database.mdf
+C:\Users\Егор\source\repos\myproject\myproject\bin\Debug\Database_log.ldf

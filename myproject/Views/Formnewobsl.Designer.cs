@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Formnewobsl));
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtPatientname = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialRadioButton4 = new MaterialSkin.Controls.MaterialRadioButton();
             this.materialRadioButton5 = new MaterialSkin.Controls.MaterialRadioButton();
@@ -42,6 +42,10 @@
             this.materialCheckbox5 = new MaterialSkin.Controls.MaterialCheckbox();
             this.materialRadioButton1 = new MaterialSkin.Controls.MaterialRadioButton();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
+            this.txtPatientsurname = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
+            this.txtDate = new MaterialSkin.Controls.MaterialTextBox();
             this.SuspendLayout();
             // 
             // materialLabel1
@@ -49,44 +53,45 @@
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(2, 99);
+            this.materialLabel1.Location = new System.Drawing.Point(12, 142);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(50, 19);
+            this.materialLabel1.Size = new System.Drawing.Size(94, 19);
             this.materialLabel1.TabIndex = 0;
-            this.materialLabel1.Text = "patient";
+            this.materialLabel1.Text = "patient name";
             // 
-            // materialTextBox1
+            // txtPatientname
             // 
-            this.materialTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox1.Depth = 0;
-            this.materialTextBox1.Font = new System.Drawing.Font("Roboto", 12F);
-            this.materialTextBox1.Location = new System.Drawing.Point(80, 99);
-            this.materialTextBox1.MaxLength = 50;
-            this.materialTextBox1.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox1.Multiline = false;
-            this.materialTextBox1.Name = "materialTextBox1";
-            this.materialTextBox1.Size = new System.Drawing.Size(196, 50);
-            this.materialTextBox1.TabIndex = 1;
-            this.materialTextBox1.Text = "";
+            this.txtPatientname.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPatientname.Depth = 0;
+            this.txtPatientname.Font = new System.Drawing.Font("Roboto", 12F);
+            this.txtPatientname.Location = new System.Drawing.Point(209, 129);
+            this.txtPatientname.MaxLength = 50;
+            this.txtPatientname.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtPatientname.Multiline = false;
+            this.txtPatientname.Name = "txtPatientname";
+            this.txtPatientname.Size = new System.Drawing.Size(196, 50);
+            this.txtPatientname.TabIndex = 1;
+            this.txtPatientname.Text = "";
             // 
             // materialLabel2
             // 
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(417, 99);
+            this.materialLabel2.Location = new System.Drawing.Point(837, 142);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(56, 19);
             this.materialLabel2.TabIndex = 2;
             this.materialLabel2.Text = "sensors";
+            this.materialLabel2.Click += new System.EventHandler(this.materialLabel2_Click);
             // 
             // materialRadioButton4
             // 
             this.materialRadioButton4.AutoSize = true;
             this.materialRadioButton4.Depth = 0;
-            this.materialRadioButton4.Location = new System.Drawing.Point(5, 311);
+            this.materialRadioButton4.Location = new System.Drawing.Point(688, 192);
             this.materialRadioButton4.Margin = new System.Windows.Forms.Padding(0);
             this.materialRadioButton4.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialRadioButton4.MouseState = MaterialSkin.MouseState.HOVER;
@@ -102,7 +107,7 @@
             // 
             this.materialRadioButton5.AutoSize = true;
             this.materialRadioButton5.Depth = 0;
-            this.materialRadioButton5.Location = new System.Drawing.Point(5, 255);
+            this.materialRadioButton5.Location = new System.Drawing.Point(688, 142);
             this.materialRadioButton5.Margin = new System.Windows.Forms.Padding(0);
             this.materialRadioButton5.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialRadioButton5.MouseState = MaterialSkin.MouseState.HOVER;
@@ -119,7 +124,7 @@
             this.materialLabel3.AutoSize = true;
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.Location = new System.Drawing.Point(2, 214);
+            this.materialLabel3.Location = new System.Drawing.Point(437, 142);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
             this.materialLabel3.Size = new System.Drawing.Size(168, 19);
@@ -130,7 +135,7 @@
             // 
             this.materialCheckbox1.AutoSize = true;
             this.materialCheckbox1.Depth = 0;
-            this.materialCheckbox1.Location = new System.Drawing.Point(338, 131);
+            this.materialCheckbox1.Location = new System.Drawing.Point(952, 142);
             this.materialCheckbox1.Margin = new System.Windows.Forms.Padding(0);
             this.materialCheckbox1.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialCheckbox1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -145,7 +150,7 @@
             // 
             this.materialCheckbox2.AutoSize = true;
             this.materialCheckbox2.Depth = 0;
-            this.materialCheckbox2.Location = new System.Drawing.Point(338, 177);
+            this.materialCheckbox2.Location = new System.Drawing.Point(952, 192);
             this.materialCheckbox2.Margin = new System.Windows.Forms.Padding(0);
             this.materialCheckbox2.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialCheckbox2.MouseState = MaterialSkin.MouseState.HOVER;
@@ -160,7 +165,7 @@
             // 
             this.materialCheckbox3.AutoSize = true;
             this.materialCheckbox3.Depth = 0;
-            this.materialCheckbox3.Location = new System.Drawing.Point(338, 214);
+            this.materialCheckbox3.Location = new System.Drawing.Point(952, 241);
             this.materialCheckbox3.Margin = new System.Windows.Forms.Padding(0);
             this.materialCheckbox3.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialCheckbox3.MouseState = MaterialSkin.MouseState.HOVER;
@@ -170,12 +175,13 @@
             this.materialCheckbox3.TabIndex = 11;
             this.materialCheckbox3.Text = "skin moisture sensor";
             this.materialCheckbox3.UseVisualStyleBackColor = true;
+            this.materialCheckbox3.CheckedChanged += new System.EventHandler(this.materialCheckbox3_CheckedChanged);
             // 
             // materialCheckbox4
             // 
             this.materialCheckbox4.AutoSize = true;
             this.materialCheckbox4.Depth = 0;
-            this.materialCheckbox4.Location = new System.Drawing.Point(338, 255);
+            this.materialCheckbox4.Location = new System.Drawing.Point(952, 292);
             this.materialCheckbox4.Margin = new System.Windows.Forms.Padding(0);
             this.materialCheckbox4.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialCheckbox4.MouseState = MaterialSkin.MouseState.HOVER;
@@ -190,7 +196,7 @@
             // 
             this.materialCheckbox5.AutoSize = true;
             this.materialCheckbox5.Depth = 0;
-            this.materialCheckbox5.Location = new System.Drawing.Point(338, 299);
+            this.materialCheckbox5.Location = new System.Drawing.Point(952, 343);
             this.materialCheckbox5.Margin = new System.Windows.Forms.Padding(0);
             this.materialCheckbox5.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialCheckbox5.MouseState = MaterialSkin.MouseState.HOVER;
@@ -205,7 +211,7 @@
             // 
             this.materialRadioButton1.AutoSize = true;
             this.materialRadioButton1.Depth = 0;
-            this.materialRadioButton1.Location = new System.Drawing.Point(5, 372);
+            this.materialRadioButton1.Location = new System.Drawing.Point(688, 254);
             this.materialRadioButton1.Margin = new System.Windows.Forms.Padding(0);
             this.materialRadioButton1.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialRadioButton1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -219,12 +225,13 @@
             // 
             // materialButton1
             // 
+            this.materialButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialButton1.Depth = 0;
             this.materialButton1.DrawShadows = true;
             this.materialButton1.HighEmphasis = true;
             this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(482, 358);
+            this.materialButton1.Location = new System.Drawing.Point(978, 420);
             this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton1.Name = "materialButton1";
@@ -236,13 +243,70 @@
             this.materialButton1.UseVisualStyleBackColor = true;
             this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
             // 
+            // materialLabel4
+            // 
+            this.materialLabel4.AutoSize = true;
+            this.materialLabel4.Depth = 0;
+            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel4.Location = new System.Drawing.Point(12, 229);
+            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel4.Name = "materialLabel4";
+            this.materialLabel4.Size = new System.Drawing.Size(116, 19);
+            this.materialLabel4.TabIndex = 16;
+            this.materialLabel4.Text = "patient surname";
+            // 
+            // txtPatientsurname
+            // 
+            this.txtPatientsurname.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPatientsurname.Depth = 0;
+            this.txtPatientsurname.Font = new System.Drawing.Font("Roboto", 12F);
+            this.txtPatientsurname.Location = new System.Drawing.Point(209, 219);
+            this.txtPatientsurname.MaxLength = 50;
+            this.txtPatientsurname.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtPatientsurname.Multiline = false;
+            this.txtPatientsurname.Name = "txtPatientsurname";
+            this.txtPatientsurname.Size = new System.Drawing.Size(196, 50);
+            this.txtPatientsurname.TabIndex = 17;
+            this.txtPatientsurname.Text = "";
+            // 
+            // materialLabel5
+            // 
+            this.materialLabel5.AutoSize = true;
+            this.materialLabel5.Depth = 0;
+            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel5.Location = new System.Drawing.Point(12, 319);
+            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel5.Name = "materialLabel5";
+            this.materialLabel5.Size = new System.Drawing.Size(32, 19);
+            this.materialLabel5.TabIndex = 18;
+            this.materialLabel5.Text = "date";
+            // 
+            // txtDate
+            // 
+            this.txtDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDate.Depth = 0;
+            this.txtDate.Font = new System.Drawing.Font("Roboto", 12F);
+            this.txtDate.Location = new System.Drawing.Point(209, 309);
+            this.txtDate.MaxLength = 50;
+            this.txtDate.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtDate.Multiline = false;
+            this.txtDate.Name = "txtDate";
+            this.txtDate.Size = new System.Drawing.Size(196, 50);
+            this.txtDate.TabIndex = 19;
+            this.txtDate.Text = "";
+            this.txtDate.TextChanged += new System.EventHandler(this.txtDate_TextChanged);
+            // 
             // Formnewobsl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1236, 482);
+            this.Controls.Add(this.txtDate);
+            this.Controls.Add(this.materialLabel5);
+            this.Controls.Add(this.txtPatientsurname);
+            this.Controls.Add(this.materialLabel4);
             this.Controls.Add(this.materialButton1);
             this.Controls.Add(this.materialRadioButton1);
             this.Controls.Add(this.materialCheckbox5);
@@ -254,10 +318,11 @@
             this.Controls.Add(this.materialRadioButton5);
             this.Controls.Add(this.materialRadioButton4);
             this.Controls.Add(this.materialLabel2);
-            this.Controls.Add(this.materialTextBox1);
+            this.Controls.Add(this.txtPatientname);
             this.Controls.Add(this.materialLabel1);
             this.Name = "Formnewobsl";
             this.Text = "Formnewobsl";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Formnewobsl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -267,7 +332,7 @@
         #endregion
 
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox1;
+        private MaterialSkin.Controls.MaterialTextBox txtPatientname;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialRadioButton materialRadioButton4;
         private MaterialSkin.Controls.MaterialRadioButton materialRadioButton5;
@@ -279,5 +344,9 @@
         private MaterialSkin.Controls.MaterialCheckbox materialCheckbox5;
         private MaterialSkin.Controls.MaterialRadioButton materialRadioButton1;
         private MaterialSkin.Controls.MaterialButton materialButton1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel4;
+        private MaterialSkin.Controls.MaterialTextBox txtPatientsurname;
+        private MaterialSkin.Controls.MaterialLabel materialLabel5;
+        private MaterialSkin.Controls.MaterialTextBox txtDate;
     }
 }

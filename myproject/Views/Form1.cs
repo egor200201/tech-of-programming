@@ -41,21 +41,23 @@ namespace myproject
 
         public string FirstnameText { get => txtFirstname.Text; set => txtFirstname.Text = value; }
         public string LastnameText { get => txtLastname.Text; set => txtLastname.Text = value; }
-        public string FullnameText { get => txtFullname.Text; set => txtFullname.Text = value; }
+        public string ResultText { get => txtResult.Text; set => txtResult.Text = value; }
 
         private void materialButton2_Click(object sender, EventArgs e)
         {
-            //  this.Hide(); // скрываем Form1 (this - текущая форма)
-            // Formadmin Formadmin = new Formadmin();
-            //Formadmin.Show(); // отображаем Form2
             Form1Presenter presenter = new Form1Presenter(this);
-            presenter.Fullname();
+            presenter.SendResult();
+            this.Hide(); // скрываем Form1 (this - текущая форма)
+             Formadmin Formadmin = new Formadmin();
+            Formadmin.Show(); // отображаем Form2
+           
 
         }
 
         private void materialButton1_Click(object sender, EventArgs e)
         {
-
+            Form1Presenter presenter = new Form1Presenter(this);
+            presenter.SendResult();
 
             this.Hide(); // скрываем Form1 (this - текущая форма)
             Formnewobsl Formnewobsl = new Formnewobsl();
@@ -63,6 +65,6 @@ namespace myproject
 
         }
 
-        
+      
     } 
 }

@@ -11,9 +11,10 @@ namespace myproject.Models
         public string FirstnameText { get; set; }
         public string LastnameText { get; set; }
 
-        public string Fullname1()
+        public string SendResult1()
         {
-            return FirstnameText + LastnameText;
+            return FirstnameText +" " + LastnameText +" loged";
+
         }
     }
 }

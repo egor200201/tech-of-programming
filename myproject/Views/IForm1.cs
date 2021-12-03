@@ -10,7 +10,7 @@ namespace myproject.Views
     {
     string FirstnameText{ get; set; }
     string LastnameText { get; set; }
-    string FullnameText { get; set; }
+    string ResultText { get; set; }
        
     }
 }

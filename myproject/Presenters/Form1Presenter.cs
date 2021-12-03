@@ -16,12 +16,12 @@ namespace myproject.Presenters
         {
             Form1view = view;
         }
-        public void Fullname()
+        public void SendResult()
         {
             Form1Model form1 = new Form1Model();
             form1.FirstnameText = Form1view.FirstnameText;
             form1.LastnameText = Form1view.LastnameText;
-            Form1view.FullnameText = form1.Fullname1();
+            Form1view.ResultText = form1.SendResult1();
         }
     }
 }
