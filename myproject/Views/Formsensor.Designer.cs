@@ -30,7 +30,7 @@
         {
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
-            this.materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
+            this.sensor = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
             // 
             // materialButton1
@@ -70,20 +70,19 @@
             this.materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButton2.UseAccentColor = false;
             this.materialButton2.UseVisualStyleBackColor = true;
+            this.materialButton2.Click += new System.EventHandler(this.materialButton2_Click);
             // 
-            // materialTextBox1
+            // sensor
             // 
-            this.materialTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox1.Depth = 0;
-            this.materialTextBox1.Font = new System.Drawing.Font("Roboto", 12F);
-            this.materialTextBox1.Location = new System.Drawing.Point(280, 106);
-            this.materialTextBox1.MaxLength = 50;
-            this.materialTextBox1.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox1.Multiline = false;
-            this.materialTextBox1.Name = "materialTextBox1";
-            this.materialTextBox1.Size = new System.Drawing.Size(100, 50);
-            this.materialTextBox1.TabIndex = 4;
-            this.materialTextBox1.Text = "";
+            this.sensor.AutoSize = true;
+            this.sensor.Depth = 0;
+            this.sensor.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.sensor.Location = new System.Drawing.Point(248, 121);
+            this.sensor.MouseState = MaterialSkin.MouseState.HOVER;
+            this.sensor.Name = "sensor";
+            this.sensor.Size = new System.Drawing.Size(56, 19);
+            this.sensor.TabIndex = 4;
+            this.sensor.Text = "sensors";
             // 
             // Formsensor
             // 
@@ -91,7 +90,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.materialTextBox1);
+            this.Controls.Add(this.sensor);
             this.Controls.Add(this.materialButton2);
             this.Controls.Add(this.materialButton1);
             this.Name = "Formsensor";
@@ -106,6 +105,6 @@
 
         private MaterialSkin.Controls.MaterialButton materialButton1;
         private MaterialSkin.Controls.MaterialButton materialButton2;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox1;
+        private MaterialSkin.Controls.MaterialLabel sensor;
     }
 }

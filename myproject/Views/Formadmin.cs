@@ -10,11 +10,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
+using myproject.Views;
+using myproject.Presenters;
 namespace myproject
 {
     public partial class Formadmin : Form
     {
         SqlConnection sqlConnection;
+
+ 
+
+        //  public ListBox ListBox1 { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public Formadmin()
         {
@@ -36,10 +42,11 @@ namespace myproject
             try
             {
                 sqlReader = await command.ExecuteReaderAsync();
+                listBox1.Items.Add("id" + "\t" + "name" + "\t" + "surname" + "\t    " + "data");
 
                 while (await sqlReader.ReadAsync())
                 {
-                    listBox1.Items.Add(Convert.ToString(sqlReader["Id"]) + "    " + Convert.ToString(sqlReader["Patientname"]) + "       " + Convert.ToString(sqlReader["Patientsurname"]) + "       " + Convert.ToString(sqlReader["Date"]));
+                    listBox1.Items.Add(Convert.ToString(sqlReader["Id"]) + "\t" + Convert.ToString(sqlReader["Patientname"]) + "\t" + Convert.ToString(sqlReader["Patientsurname"]) + "\t   " + Convert.ToString(sqlReader["Date"]));
                 }
             }
             catch (Exception ex)
@@ -51,24 +58,14 @@ namespace myproject
                 if (sqlReader != null)
                     sqlReader.Close();
             }
+
         }
-
-
-
-
-        private void Formadmin_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (sqlConnection != null && sqlConnection.State != ConnectionState.Closed)
-                sqlConnection.Close();
-        }
-
-
-
 
 
 
         private async void Buttondelete_Click(object sender, EventArgs e)
         {
+           
             if (label8.Visible)
                 label8.Visible = false;
 
@@ -88,11 +85,11 @@ namespace myproject
             }
         }
 
- 
 
-      
 
-        private async void Button2_Click(object sender, EventArgs e)
+
+
+            private async void Button2_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
             if (updatemistake.Visible)
@@ -180,6 +177,11 @@ namespace myproject
                 if (sqlReader != null)
                     sqlReader.Close();
             }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

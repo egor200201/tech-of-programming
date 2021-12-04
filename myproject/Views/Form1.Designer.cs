@@ -32,11 +32,9 @@
             this.txtFirstname = new MaterialSkin.Controls.MaterialTextBox();
             this.txtLastname = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
-            this.txtResult = new MaterialSkin.Controls.MaterialTextBox();
             this.surname = new MaterialSkin.Controls.MaterialLabel();
-            this.txtPassword = new MaterialSkin.Controls.MaterialTextBox();
+            this.form1mistake = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
             // 
             // materialButton1
@@ -110,21 +108,6 @@
             this.materialLabel1.TabIndex = 3;
             this.materialLabel1.Text = "name";
             // 
-            // materialLabel2
-            // 
-            this.materialLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialLabel2.AutoSize = true;
-            this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(336, 303);
-            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(70, 19);
-            this.materialLabel2.TabIndex = 4;
-            this.materialLabel2.Text = "password";
-            // 
             // materialButton2
             // 
             this.materialButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -149,25 +132,6 @@
             this.materialButton2.UseVisualStyleBackColor = false;
             this.materialButton2.Click += new System.EventHandler(this.materialButton2_Click);
             // 
-            // txtResult
-            // 
-            this.txtResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtResult.BackColor = System.Drawing.SystemColors.Window;
-            this.txtResult.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtResult.Depth = 0;
-            this.txtResult.Font = new System.Drawing.Font("Roboto", 12F);
-            this.txtResult.Location = new System.Drawing.Point(491, 390);
-            this.txtResult.MaxLength = 50;
-            this.txtResult.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtResult.Multiline = false;
-            this.txtResult.Name = "txtResult";
-            this.txtResult.ReadOnly = true;
-            this.txtResult.Size = new System.Drawing.Size(194, 50);
-            this.txtResult.TabIndex = 7;
-            this.txtResult.Text = "";
-            // 
             // surname
             // 
             this.surname.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -183,33 +147,27 @@
             this.surname.TabIndex = 8;
             this.surname.Text = "surname";
             // 
-            // txtPassword
+            // form1mistake
             // 
-            this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Depth = 0;
-            this.txtPassword.Font = new System.Drawing.Font("Roboto", 12F);
-            this.txtPassword.Location = new System.Drawing.Point(491, 293);
-            this.txtPassword.MaxLength = 50;
-            this.txtPassword.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtPassword.Multiline = false;
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(194, 50);
-            this.txtPassword.TabIndex = 9;
-            this.txtPassword.Text = "";
+            this.form1mistake.AutoSize = true;
+            this.form1mistake.Depth = 0;
+            this.form1mistake.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.form1mistake.Location = new System.Drawing.Point(520, 306);
+            this.form1mistake.MouseState = MaterialSkin.MouseState.HOVER;
+            this.form1mistake.Name = "form1mistake";
+            this.form1mistake.Size = new System.Drawing.Size(107, 19);
+            this.form1mistake.TabIndex = 9;
+            this.form1mistake.Text = "materialLabel2";
+            this.form1mistake.Visible = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1231, 543);
-            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.form1mistake);
             this.Controls.Add(this.surname);
-            this.Controls.Add(this.txtResult);
             this.Controls.Add(this.materialButton2);
-            this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.txtLastname);
             this.Controls.Add(this.txtFirstname);
@@ -228,11 +186,9 @@
         private MaterialSkin.Controls.MaterialTextBox txtFirstname;
         private MaterialSkin.Controls.MaterialTextBox txtLastname;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialButton materialButton2;
-        private MaterialSkin.Controls.MaterialTextBox txtResult;
         private MaterialSkin.Controls.MaterialLabel surname;
-        private MaterialSkin.Controls.MaterialTextBox txtPassword;
+        private MaterialSkin.Controls.MaterialLabel form1mistake;
     }
 }
 

@@ -46,6 +46,7 @@
             this.txtPatientsurname = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.txtDate = new MaterialSkin.Controls.MaterialTextBox();
+            this.inmistake = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
             // 
             // materialLabel1
@@ -85,7 +86,6 @@
             this.materialLabel2.Size = new System.Drawing.Size(56, 19);
             this.materialLabel2.TabIndex = 2;
             this.materialLabel2.Text = "sensors";
-            this.materialLabel2.Click += new System.EventHandler(this.materialLabel2_Click);
             // 
             // materialRadioButton4
             // 
@@ -175,7 +175,6 @@
             this.materialCheckbox3.TabIndex = 11;
             this.materialCheckbox3.Text = "skin moisture sensor";
             this.materialCheckbox3.UseVisualStyleBackColor = true;
-            this.materialCheckbox3.CheckedChanged += new System.EventHandler(this.materialCheckbox3_CheckedChanged);
             // 
             // materialCheckbox4
             // 
@@ -294,7 +293,19 @@
             this.txtDate.Size = new System.Drawing.Size(196, 50);
             this.txtDate.TabIndex = 19;
             this.txtDate.Text = "";
-            this.txtDate.TextChanged += new System.EventHandler(this.txtDate_TextChanged);
+            // 
+            // inmistake
+            // 
+            this.inmistake.AutoSize = true;
+            this.inmistake.Depth = 0;
+            this.inmistake.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.inmistake.Location = new System.Drawing.Point(477, 343);
+            this.inmistake.MouseState = MaterialSkin.MouseState.HOVER;
+            this.inmistake.Name = "inmistake";
+            this.inmistake.Size = new System.Drawing.Size(107, 19);
+            this.inmistake.TabIndex = 20;
+            this.inmistake.Text = "materialLabel6";
+            this.inmistake.Visible = false;
             // 
             // Formnewobsl
             // 
@@ -303,6 +314,7 @@
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1236, 482);
+            this.Controls.Add(this.inmistake);
             this.Controls.Add(this.txtDate);
             this.Controls.Add(this.materialLabel5);
             this.Controls.Add(this.txtPatientsurname);
@@ -348,5 +360,6 @@
         private MaterialSkin.Controls.MaterialTextBox txtPatientsurname;
         private MaterialSkin.Controls.MaterialLabel materialLabel5;
         private MaterialSkin.Controls.MaterialTextBox txtDate;
+        private MaterialSkin.Controls.MaterialLabel inmistake;
     }
 }

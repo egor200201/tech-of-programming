@@ -14,7 +14,7 @@ using myproject.Views;
 using myproject.Presenters;
 namespace myproject
 {
-    public partial class Form1 : MaterialForm, IForm1
+    public partial class Form1 : MaterialForm
     {
       
 
@@ -41,30 +41,49 @@ namespace myproject
 
         public string FirstnameText { get => txtFirstname.Text; set => txtFirstname.Text = value; }
         public string LastnameText { get => txtLastname.Text; set => txtLastname.Text = value; }
-        public string ResultText { get => txtResult.Text; set => txtResult.Text = value; }
+     //   public string ResultText { get => txtResult.Text; set => txtResult.Text = value; }
 
         private void materialButton2_Click(object sender, EventArgs e)
         {
-            Form1Presenter presenter = new Form1Presenter(this);
-            presenter.SendResult();
-            this.Hide(); // скрываем Form1 (this - текущая форма)
-             Formadmin Formadmin = new Formadmin();
-            Formadmin.Show(); // отображаем Form2
            
 
+            if (form1mistake.Visible)
+                form1mistake.Visible = false;
+
+            if (!string.IsNullOrEmpty(txtFirstname.Text) && !string.IsNullOrWhiteSpace(txtLastname.Text))
+            {
+                this.Hide(); // скрываем Form1 (this - текущая форма)
+                Formadmin Formadmin = new Formadmin();
+                Formadmin.Show(); // отображаем Form2
+            }
+            else
+            {
+                form1mistake.Visible = true;
+
+                form1mistake.Text = "check data!";
+            }
         }
 
         private void materialButton1_Click(object sender, EventArgs e)
         {
-            Form1Presenter presenter = new Form1Presenter(this);
-            presenter.SendResult();
+            if (form1mistake.Visible)
+                form1mistake.Visible = false;
 
-            this.Hide(); // скрываем Form1 (this - текущая форма)
-            Formnewobsl Formnewobsl = new Formnewobsl();
-            Formnewobsl.Show(); // отображаем Form2
+            if (!string.IsNullOrEmpty(txtFirstname.Text) && !string.IsNullOrWhiteSpace(txtLastname.Text))
+            {
+                this.Hide(); // скрываем Form1 (this - текущая форма)
+                Formnewobsl Formnewobsl = new Formnewobsl();
+                Formnewobsl.Show(); // отображаем Form2
+            }
+            else
+            {
+                form1mistake.Visible = true;
 
+                form1mistake.Text = "check data!";
+            }
         }
+    }
+    }
 
+     
       
-    } 
-}
