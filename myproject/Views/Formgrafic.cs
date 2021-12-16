@@ -17,7 +17,7 @@ namespace myproject
 {
     public partial class Formgrafic : MaterialForm, IFormgrafic
     {
-        int temp;
+        double temp;
         int elconductivity;
         int bloodpresure;
         int skinmoisture;
@@ -36,7 +36,7 @@ namespace myproject
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Blue800, Primary.Blue900, Primary.Blue500, Accent.LightBlue200, TextShade.WHITE);
         }
-        int IFormgrafic.value
+        double IFormgrafic.value
         {
             get
             {
@@ -101,8 +101,8 @@ namespace myproject
             tempsensor = Formnewobsl.tempsensor1;
             moistsensor = Formnewobsl.moistsensor1;
             timer.Enabled = true;
-            chart.ChartAreas[0].AxisY.Maximum = 50;
-            chart.ChartAreas[0].AxisY.Minimum = 20;
+            chart.ChartAreas[0].AxisY.Maximum = 38;
+            chart.ChartAreas[0].AxisY.Minimum = 36;
             chart.ChartAreas[0].AxisX.LabelStyle.Format = "H:mm:ss";
             chart.Series[0].XValueType = ChartValueType.DateTime;
             chart.ChartAreas[0].AxisX.Minimum = DateTime.Now.ToOADate();
@@ -110,8 +110,8 @@ namespace myproject
             chart.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Seconds;
             chart.ChartAreas[0].AxisX.Interval = 5;
 
-            electricalconductivitychart.ChartAreas[0].AxisY.Maximum = 50;
-            electricalconductivitychart.ChartAreas[0].AxisY.Minimum = 20;
+            electricalconductivitychart.ChartAreas[0].AxisY.Maximum = 30;
+            electricalconductivitychart.ChartAreas[0].AxisY.Minimum = 0;
             electricalconductivitychart.ChartAreas[0].AxisX.LabelStyle.Format = "H:mm:ss";
             electricalconductivitychart.Series[0].XValueType = ChartValueType.DateTime;
             electricalconductivitychart.ChartAreas[0].AxisX.Minimum = DateTime.Now.ToOADate();
@@ -121,8 +121,8 @@ namespace myproject
 
 
             
-            bloodpresurechart.ChartAreas[0].AxisY.Maximum = 50;
-            bloodpresurechart.ChartAreas[0].AxisY.Minimum = 20;
+            bloodpresurechart.ChartAreas[0].AxisY.Maximum = 170;
+            bloodpresurechart.ChartAreas[0].AxisY.Minimum = 70;
             bloodpresurechart.ChartAreas[0].AxisX.LabelStyle.Format = "H:mm:ss";
             bloodpresurechart.Series[0].XValueType = ChartValueType.DateTime;
             bloodpresurechart.ChartAreas[0].AxisX.Minimum = DateTime.Now.ToOADate();
@@ -130,8 +130,8 @@ namespace myproject
             bloodpresurechart.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Seconds;
             bloodpresurechart.ChartAreas[0].AxisX.Interval = 5;
 
-            skinmoisturechart.ChartAreas[0].AxisY.Maximum = 50;
-            skinmoisturechart.ChartAreas[0].AxisY.Minimum = 20;
+            skinmoisturechart.ChartAreas[0].AxisY.Maximum = 30;
+            skinmoisturechart.ChartAreas[0].AxisY.Minimum = 8;
             skinmoisturechart.ChartAreas[0].AxisX.LabelStyle.Format = "H:mm:ss";
             skinmoisturechart.Series[0].XValueType = ChartValueType.DateTime;
             skinmoisturechart.ChartAreas[0].AxisX.Minimum = DateTime.Now.ToOADate();
@@ -140,8 +140,8 @@ namespace myproject
             skinmoisturechart.ChartAreas[0].AxisX.Interval = 5;
 
 
-            hartratechart.ChartAreas[0].AxisY.Maximum = 50;
-            hartratechart.ChartAreas[0].AxisY.Minimum = 20;
+            hartratechart.ChartAreas[0].AxisY.Maximum = 180;
+            hartratechart.ChartAreas[0].AxisY.Minimum = 50;
             hartratechart.ChartAreas[0].AxisX.LabelStyle.Format = "H:mm:ss";
             hartratechart.Series[0].XValueType = ChartValueType.DateTime;
             hartratechart.ChartAreas[0].AxisX.Minimum = DateTime.Now.ToOADate();
@@ -213,9 +213,14 @@ namespace myproject
             }
         }
 
+        private void materialButton3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
-            label1.Text = Formnewobsl.tempsensor1.ToString();
+            label1.Text = temp.ToString();
         }
     }
 }

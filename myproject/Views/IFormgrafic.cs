@@ -10,7 +10,7 @@ namespace myproject.Views
     public interface IFormgrafic
     {
 
-        int value { get; set; }
+        double value { get; set; }
         int value1 { get; set; }
         int value2 { get; set; }
         int value3 { get; set; }

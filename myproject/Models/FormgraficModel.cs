@@ -16,27 +16,45 @@ namespace myproject.Models
         public int randRate;
         public int randMoist;
         public int randPres;
-        public int Skintemp1(int typeofact, int tempsensor)
+        public double Skintemp1(int typeofact, int tempsensor)
         {
-            int randTemp;
+            double randTemp;
+            double plusminus;
 
             if (typeofact == 1)
             {
-                Random randomTemperature = new Random();
-                randTemp = randomTemperature.Next(34, 42);
-                randTemp = Convert.ToInt32(randTemp * 1.2);
+                randTemp = 36.8;
+                Random rnd = new Random();
+                plusminus = rnd.Next(-1, 1);
+                plusminus = plusminus / 10;
+                //Random randomTemperature = new Random();
+                //randTemp = randomTemperature.Next(35, 42);
+                randTemp = randTemp + plusminus;
             }
             if (typeofact == 2)
             {
-                Random randomTemperature = new Random();
-                randTemp = randomTemperature.Next(34, 42);
+                randTemp = 36.6;
+                Random rnd = new Random();
+                plusminus = rnd.Next(-1, 1);
+                plusminus = plusminus / 10;
+                //Random randomTemperature = new Random();
+                //randTemp = randomTemperature.Next(34, 42);
                 //randTemp = Convert.ToInt32(randTemp * 1.2);
+                randTemp = randTemp + plusminus;
             }
             else
             {
-                Random randomTemperature = new Random();
-                randTemp = randomTemperature.Next(34, 42);
-                randTemp = Convert.ToInt32(randTemp * 0.8);
+                randTemp = 36.7;
+                Random rnd = new Random();
+                plusminus = rnd.Next(-1, 1);
+                plusminus = plusminus / 10;
+                //Random rnd = new Random();
+                //randTemp = Math.Round(36.6 + rnd.NextDouble() * (35 + 37.2), 13);
+                //randTemp = randTemp * 1.1;
+                //Random randomTemperature = new Random();
+                //randTemp = randomTemperature.Next(34, 42);
+                //randTemp = Convert.ToInt32(randTemp * 0.8);
+                randTemp = randTemp + plusminus;
             }
             if (tempsensor == 1)
             { return randTemp; }
@@ -47,7 +65,7 @@ namespace myproject.Models
 
 
 
-
+        public static int el=0;
 
         public int Electricalconductivity1(int typeofact, int elsensor)
         {
@@ -56,65 +74,128 @@ namespace myproject.Models
             Thread.Sleep(15);
             if (typeofact == 1)
             {
-                Random randomEl = new Random(DateTime.Now.Millisecond);
-                randEl = randomEl.Next(32, 44);
-                randEl = Convert.ToInt32(randEl * 1.2);
+                if (el < 25)
+                {
+                    Random randomEl = new Random();
+                    randEl = randomEl.Next(0, 1);
+                    el = el + randEl;
+                }
+                else
+                {
+                    Random randomEl = new Random();
+                    randEl = randomEl.Next(-1, 1);
+                    el = el + randEl;
+                }
             }
             if (typeofact == 2)
             {
-                Random randomEl = new Random(DateTime.Now.Millisecond);
-                randEl = randomEl.Next(32, 44);
 
+                if (el < 20)
+                {
+                    Random randomEl = new Random();
+                    randEl = randomEl.Next(0, 3);
+                    el = el + randEl;
+                }
+                else
+                {
+                    Random randomEl = new Random();
+                    randEl = randomEl.Next(-1, 1);
+                    el = el + randEl;
+                }
             }
             else
             {
-                Random randomEl = new Random(DateTime.Now.Millisecond);
-                randEl = randomEl.Next(32, 44);
-                //  randEl = 36;
-                randEl = Convert.ToInt32(randEl * 0.8);
+
+                if (el < 23)
+                {
+                    Random randomEl = new Random();
+                    randEl = randomEl.Next(0, 2);
+                    el = el + randEl;
+                }
+                else
+                {
+                    Random randomEl = new Random();
+                    randEl = randomEl.Next(-1, 1);
+                    el = el + randEl;
+
+                }
             }
             if (elsensor == 1)
-            { return randEl; }
+            { return el; }
             else { return 36; }
         }
-        
-        
-            
-            //   Random rnd = new Random();
-            // operand = rnd.Next(0, 5);
-            //return operand;
 
-        
-       
+
+
+        //   Random rnd = new Random();
+        // operand = rnd.Next(0, 5);
+        //return operand;
+
+
+        public static int pres=110;
         public int Bloodpresure1(int typeofact,int pressensor)
         {
             int randPres;
             if (pressensor == 1)
             {
                 Thread.Sleep(15);
+
                 if (typeofact == 1)
                 {
-                    Random randomPresure = new Random();
-                    randPres = randomPresure.Next(34, 42);
-                    randPres = Convert.ToInt32(randPres * 1.2);
+                    if (pres < 150)
+                    {
+                        Random randomPresure = new Random();
+                        randPres = randomPresure.Next(0, 5);
+                        pres = pres + randPres;
+                    }
+                    else
+                    {
+                        Random randomPresure = new Random();
+                        randPres = randomPresure.Next(-1, 1);
+                        pres = pres + randPres;
+
+                    }
                 }
+                
                 if (typeofact == 2)
                 {
-                    Random randomPresure = new Random();
-                    randPres = randomPresure.Next(34, 42);
+                    if (pres < 130)
+                    {
+                        Random randomPresure = new Random();
+                        randPres = randomPresure.Next(0, 4);
+                        pres = pres + randPres;
+                    }
+                    else
+                    {
+                        Random randomPresure = new Random();
+                        randPres = randomPresure.Next(-1, 1);
+                        pres = pres + randPres;
+
+                    }
 
                 }
                 else
                 {
-                    Random randomPresure = new Random();
-                    randPres = randomPresure.Next(34, 42);
-                    randPres = Convert.ToInt32(randPres * 0.8);
+                    if (pres < 140)
+                    {
+                        Random randomPresure = new Random();
+                        randPres = randomPresure.Next(0, 5);
+                        pres = pres + randPres;
+                    }
+                    else
+                    {
+                        Random randomPresure = new Random();
+                        randPres = randomPresure.Next(-1, 1);
+                        pres = pres + randPres;
+
+                    }
                 }
             }
-            else { randPres = 36; }
-            return randPres;
+            else { pres = 100; }
+            return pres;
 
         }
+        public static int moist=15;
         public int Skinmoisture1(int typeofact,int moistsensor)
         {
             Thread.Sleep(15);
@@ -122,65 +203,123 @@ namespace myproject.Models
             
                 if (typeofact == 1)
                 {
-
-                    Random randomMoist = new Random();
-                    randMoist = randomMoist.Next(34, 42);
-                    randMoist = Convert.ToInt32(randMoist * 1.2);
-                }
-                if (typeofact == 2)
+                if (moist < 25)
                 {
-
                     Random randomMoist = new Random();
-                    randMoist = randomMoist.Next(34, 42);
-
+                    randMoist = randomMoist.Next(0, 3);
+                    moist = moist + randMoist;
                 }
                 else
                 {
-
                     Random randomMoist = new Random();
-                    randMoist = randomMoist.Next(34, 42);
-                    randMoist = Convert.ToInt32(randMoist * 0.8);
+                    randMoist = randomMoist.Next(-1, 1);
+                    moist = moist + randMoist;
+
                 }
+            }
+                if (typeofact == 2)
+                {
+
+                if (moist < 25)
+                {
+                    Random randomMoist = new Random();
+                    randMoist = randomMoist.Next(0, 1);
+                    moist = moist + randMoist;
+                }
+                else
+                {
+                    Random randomMoist = new Random();
+                    randMoist = randomMoist.Next(-1, 1);
+                    moist = moist + randMoist;
+
+                }
+            }
+                else
+                {
+
+                if (moist < 25)
+                {
+                    Random randomMoist = new Random();
+                    randMoist = randomMoist.Next(0, 2);
+                    moist = moist + randMoist;
+                }
+                else
+                {
+                    Random randomMoist = new Random();
+                    randMoist = randomMoist.Next(-1, 1);
+                    moist = moist + randMoist;
+
+                }
+            }
             if (moistsensor == 1)
             {
-                return randMoist;
+                return moist;
             }
             else
-            { return 36; }
+            { return 15; }
          
 
         }
+        public static int Rate=60;
         public int Hartrate1(int typeofact,int ratesensor)
         {
-            int randRate;
+            
             Thread.Sleep(15);
            
                 if (typeofact == 1)
                 {
 
                     Random randomRate = new Random();
-
-                    randRate = randomRate.Next(34, 42);
-                randRate = Convert.ToInt32(randRate * 1.2);
-            }
-            if (typeofact == 2)
+                if (Rate < 160)
                 {
-                    Random randomRate = new Random();
-
-                    randRate = randomRate.Next(34, 42);
+                    randRate = randomRate.Next(0, 5);
+                    Rate = Rate + randRate;
                 }
                 else
                 {
-                    Random randomRate = new Random();
+                    randRate = randomRate.Next(-1, 1);
 
-                    randRate = randomRate.Next(34, 42);
-                    randRate = Convert.ToInt32(randRate * 0.8);
+                    Rate = Rate + randRate;
+                }
+
+
+                
+            }
+            if (typeofact == 2)
+                {
+                Random randomRate = new Random();
+                if (Rate < 130)
+                {
+                    randRate = randomRate.Next(0, 3);
+                    Rate = Rate + randRate;
+                }
+                else
+                {
+                    randRate = randomRate.Next(-1, 1);
+
+                    Rate = Rate + randRate;
+                }
+            }
+            if (typeofact == 3)
+            {
+                Random randomRate = new Random();
+                if (Rate < 145)
+                {
+                    randRate = randomRate.Next(0, 4);
+                    Rate = Rate + randRate;
+                }
+                else
+                {
+                    randRate = randomRate.Next(-1, 1);
+
+                    Rate = Rate + randRate;
+                }
             }
             if (ratesensor == 1)
             {
-                return randRate;
+                return Rate;
             }
-            else { return 36; }
+            else { return 60; }
           
             
         }
