@@ -35,11 +35,11 @@
             this.materialRadioButton4 = new MaterialSkin.Controls.MaterialRadioButton();
             this.materialRadioButton5 = new MaterialSkin.Controls.MaterialRadioButton();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialCheckbox1 = new MaterialSkin.Controls.MaterialCheckbox();
-            this.materialCheckbox2 = new MaterialSkin.Controls.MaterialCheckbox();
-            this.materialCheckbox3 = new MaterialSkin.Controls.MaterialCheckbox();
-            this.materialCheckbox4 = new MaterialSkin.Controls.MaterialCheckbox();
-            this.materialCheckbox5 = new MaterialSkin.Controls.MaterialCheckbox();
+            this.presureCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.tempCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.moisturerCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.ElCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.rateCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
             this.materialRadioButton1 = new MaterialSkin.Controls.MaterialRadioButton();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
@@ -102,6 +102,7 @@
             this.materialRadioButton4.TabStop = true;
             this.materialRadioButton4.Text = "walk";
             this.materialRadioButton4.UseVisualStyleBackColor = true;
+            this.materialRadioButton4.CheckedChanged += new System.EventHandler(this.materialRadioButton4_CheckedChanged);
             // 
             // materialRadioButton5
             // 
@@ -118,6 +119,7 @@
             this.materialRadioButton5.TabStop = true;
             this.materialRadioButton5.Text = "run";
             this.materialRadioButton5.UseVisualStyleBackColor = true;
+            this.materialRadioButton5.CheckedChanged += new System.EventHandler(this.materialRadioButton5_CheckedChanged);
             // 
             // materialLabel3
             // 
@@ -131,80 +133,85 @@
             this.materialLabel3.TabIndex = 8;
             this.materialLabel3.Text = "type of physical activity";
             // 
-            // materialCheckbox1
+            // presureCheckbox
             // 
-            this.materialCheckbox1.AutoSize = true;
-            this.materialCheckbox1.Depth = 0;
-            this.materialCheckbox1.Location = new System.Drawing.Point(952, 142);
-            this.materialCheckbox1.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckbox1.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckbox1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckbox1.Name = "materialCheckbox1";
-            this.materialCheckbox1.Ripple = true;
-            this.materialCheckbox1.Size = new System.Drawing.Size(190, 37);
-            this.materialCheckbox1.TabIndex = 9;
-            this.materialCheckbox1.Text = "blood pressure sensor";
-            this.materialCheckbox1.UseVisualStyleBackColor = true;
+            this.presureCheckbox.AutoSize = true;
+            this.presureCheckbox.Depth = 0;
+            this.presureCheckbox.Location = new System.Drawing.Point(952, 142);
+            this.presureCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.presureCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.presureCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.presureCheckbox.Name = "presureCheckbox";
+            this.presureCheckbox.Ripple = true;
+            this.presureCheckbox.Size = new System.Drawing.Size(190, 37);
+            this.presureCheckbox.TabIndex = 9;
+            this.presureCheckbox.Text = "blood pressure sensor";
+            this.presureCheckbox.UseVisualStyleBackColor = true;
+            this.presureCheckbox.CheckedChanged += new System.EventHandler(this.presureCheckbox_CheckedChanged);
             // 
-            // materialCheckbox2
+            // tempCheckbox
             // 
-            this.materialCheckbox2.AutoSize = true;
-            this.materialCheckbox2.Depth = 0;
-            this.materialCheckbox2.Location = new System.Drawing.Point(952, 192);
-            this.materialCheckbox2.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckbox2.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckbox2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckbox2.Name = "materialCheckbox2";
-            this.materialCheckbox2.Ripple = true;
-            this.materialCheckbox2.Size = new System.Drawing.Size(204, 37);
-            this.materialCheckbox2.TabIndex = 10;
-            this.materialCheckbox2.Text = "skin temperature sensor";
-            this.materialCheckbox2.UseVisualStyleBackColor = true;
+            this.tempCheckbox.AutoSize = true;
+            this.tempCheckbox.Depth = 0;
+            this.tempCheckbox.Location = new System.Drawing.Point(952, 192);
+            this.tempCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.tempCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.tempCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tempCheckbox.Name = "tempCheckbox";
+            this.tempCheckbox.Ripple = true;
+            this.tempCheckbox.Size = new System.Drawing.Size(204, 37);
+            this.tempCheckbox.TabIndex = 10;
+            this.tempCheckbox.Text = "skin temperature sensor";
+            this.tempCheckbox.UseVisualStyleBackColor = true;
+            this.tempCheckbox.CheckedChanged += new System.EventHandler(this.tempCheckbox_CheckedChanged);
             // 
-            // materialCheckbox3
+            // moisturerCheckbox
             // 
-            this.materialCheckbox3.AutoSize = true;
-            this.materialCheckbox3.Depth = 0;
-            this.materialCheckbox3.Location = new System.Drawing.Point(952, 241);
-            this.materialCheckbox3.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckbox3.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckbox3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckbox3.Name = "materialCheckbox3";
-            this.materialCheckbox3.Ripple = true;
-            this.materialCheckbox3.Size = new System.Drawing.Size(181, 37);
-            this.materialCheckbox3.TabIndex = 11;
-            this.materialCheckbox3.Text = "skin moisture sensor";
-            this.materialCheckbox3.UseVisualStyleBackColor = true;
+            this.moisturerCheckbox.AutoSize = true;
+            this.moisturerCheckbox.Depth = 0;
+            this.moisturerCheckbox.Location = new System.Drawing.Point(952, 241);
+            this.moisturerCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.moisturerCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.moisturerCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.moisturerCheckbox.Name = "moisturerCheckbox";
+            this.moisturerCheckbox.Ripple = true;
+            this.moisturerCheckbox.Size = new System.Drawing.Size(181, 37);
+            this.moisturerCheckbox.TabIndex = 11;
+            this.moisturerCheckbox.Text = "skin moisture sensor";
+            this.moisturerCheckbox.UseVisualStyleBackColor = true;
+            this.moisturerCheckbox.CheckedChanged += new System.EventHandler(this.moisturerCheckbox_CheckedChanged);
             // 
-            // materialCheckbox4
+            // ElCheckbox
             // 
-            this.materialCheckbox4.AutoSize = true;
-            this.materialCheckbox4.Depth = 0;
-            this.materialCheckbox4.Location = new System.Drawing.Point(952, 292);
-            this.materialCheckbox4.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckbox4.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckbox4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckbox4.Name = "materialCheckbox4";
-            this.materialCheckbox4.Ripple = true;
-            this.materialCheckbox4.Size = new System.Drawing.Size(272, 37);
-            this.materialCheckbox4.TabIndex = 12;
-            this.materialCheckbox4.Text = "skin electrical conductivity sensor";
-            this.materialCheckbox4.UseVisualStyleBackColor = true;
+            this.ElCheckbox.AutoSize = true;
+            this.ElCheckbox.Depth = 0;
+            this.ElCheckbox.Location = new System.Drawing.Point(952, 292);
+            this.ElCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.ElCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.ElCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ElCheckbox.Name = "ElCheckbox";
+            this.ElCheckbox.Ripple = true;
+            this.ElCheckbox.Size = new System.Drawing.Size(272, 37);
+            this.ElCheckbox.TabIndex = 12;
+            this.ElCheckbox.Text = "skin electrical conductivity sensor";
+            this.ElCheckbox.UseVisualStyleBackColor = true;
+            this.ElCheckbox.CheckedChanged += new System.EventHandler(this.ElCheckbox_CheckedChanged);
             // 
-            // materialCheckbox5
+            // rateCheckbox
             // 
-            this.materialCheckbox5.AutoSize = true;
-            this.materialCheckbox5.Depth = 0;
-            this.materialCheckbox5.Location = new System.Drawing.Point(952, 343);
-            this.materialCheckbox5.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckbox5.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckbox5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckbox5.Name = "materialCheckbox5";
-            this.materialCheckbox5.Ripple = true;
-            this.materialCheckbox5.Size = new System.Drawing.Size(153, 37);
-            this.materialCheckbox5.TabIndex = 13;
-            this.materialCheckbox5.Text = "heart rate sensor";
-            this.materialCheckbox5.UseVisualStyleBackColor = true;
+            this.rateCheckbox.AutoSize = true;
+            this.rateCheckbox.Depth = 0;
+            this.rateCheckbox.Location = new System.Drawing.Point(952, 343);
+            this.rateCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.rateCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.rateCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.rateCheckbox.Name = "rateCheckbox";
+            this.rateCheckbox.Ripple = true;
+            this.rateCheckbox.Size = new System.Drawing.Size(153, 37);
+            this.rateCheckbox.TabIndex = 13;
+            this.rateCheckbox.Text = "heart rate sensor";
+            this.rateCheckbox.UseVisualStyleBackColor = true;
+            this.rateCheckbox.CheckedChanged += new System.EventHandler(this.rateCheckbox_CheckedChanged);
             // 
             // materialRadioButton1
             // 
@@ -221,6 +228,7 @@
             this.materialRadioButton1.TabStop = true;
             this.materialRadioButton1.Text = "bicycle";
             this.materialRadioButton1.UseVisualStyleBackColor = true;
+            this.materialRadioButton1.CheckedChanged += new System.EventHandler(this.materialRadioButton1_CheckedChanged);
             // 
             // materialButton1
             // 
@@ -321,11 +329,11 @@
             this.Controls.Add(this.materialLabel4);
             this.Controls.Add(this.materialButton1);
             this.Controls.Add(this.materialRadioButton1);
-            this.Controls.Add(this.materialCheckbox5);
-            this.Controls.Add(this.materialCheckbox4);
-            this.Controls.Add(this.materialCheckbox3);
-            this.Controls.Add(this.materialCheckbox2);
-            this.Controls.Add(this.materialCheckbox1);
+            this.Controls.Add(this.rateCheckbox);
+            this.Controls.Add(this.ElCheckbox);
+            this.Controls.Add(this.moisturerCheckbox);
+            this.Controls.Add(this.tempCheckbox);
+            this.Controls.Add(this.presureCheckbox);
             this.Controls.Add(this.materialLabel3);
             this.Controls.Add(this.materialRadioButton5);
             this.Controls.Add(this.materialRadioButton4);
@@ -349,11 +357,11 @@
         private MaterialSkin.Controls.MaterialRadioButton materialRadioButton4;
         private MaterialSkin.Controls.MaterialRadioButton materialRadioButton5;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
-        private MaterialSkin.Controls.MaterialCheckbox materialCheckbox1;
-        private MaterialSkin.Controls.MaterialCheckbox materialCheckbox2;
-        private MaterialSkin.Controls.MaterialCheckbox materialCheckbox3;
-        private MaterialSkin.Controls.MaterialCheckbox materialCheckbox4;
-        private MaterialSkin.Controls.MaterialCheckbox materialCheckbox5;
+        private MaterialSkin.Controls.MaterialCheckbox presureCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox tempCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox moisturerCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox ElCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox rateCheckbox;
         private MaterialSkin.Controls.MaterialRadioButton materialRadioButton1;
         private MaterialSkin.Controls.MaterialButton materialButton1;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;

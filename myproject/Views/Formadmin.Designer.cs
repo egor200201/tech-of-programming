@@ -134,7 +134,7 @@
             this.apdatedbToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1220, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1220, 36);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -143,7 +143,7 @@
             this.fileToolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem2});
             this.fileToolStripMenuItem2.Name = "fileToolStripMenuItem2";
-            this.fileToolStripMenuItem2.Size = new System.Drawing.Size(51, 29);
+            this.fileToolStripMenuItem2.Size = new System.Drawing.Size(51, 30);
             this.fileToolStripMenuItem2.Text = "file";
             // 
             // exitToolStripMenuItem2
@@ -158,7 +158,7 @@
             this.apdatedbToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.apdateDbToolStripMenuItem1});
             this.apdatedbToolStripMenuItem.Name = "apdatedbToolStripMenuItem";
-            this.apdatedbToolStripMenuItem.Size = new System.Drawing.Size(68, 29);
+            this.apdatedbToolStripMenuItem.Size = new System.Drawing.Size(68, 30);
             this.apdatedbToolStripMenuItem.Text = "tools";
             // 
             // apdateDbToolStripMenuItem1
@@ -175,10 +175,10 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 33);
+            this.tabControl1.Location = new System.Drawing.Point(0, 36);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1220, 452);
+            this.tabControl1.Size = new System.Drawing.Size(1220, 449);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPage1
@@ -187,7 +187,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1212, 419);
+            this.tabPage1.Size = new System.Drawing.Size(1212, 416);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "SELECT";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -199,9 +199,8 @@
             this.listBox1.ItemHeight = 20;
             this.listBox1.Location = new System.Drawing.Point(3, 3);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(1206, 413);
+            this.listBox1.Size = new System.Drawing.Size(1206, 410);
             this.listBox1.TabIndex = 0;
-//            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // tabPage2
             // 
@@ -216,7 +215,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1212, 419);
+            this.tabPage2.Size = new System.Drawing.Size(1212, 416);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "INSERT";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -304,7 +303,7 @@
             this.tabPage3.Controls.Add(this.textBox6);
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1212, 419);
+            this.tabPage3.Size = new System.Drawing.Size(1212, 416);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "APDATE";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -402,7 +401,7 @@
             this.tabPage4.Controls.Add(this.label8);
             this.tabPage4.Location = new System.Drawing.Point(4, 29);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1212, 419);
+            this.tabPage4.Size = new System.Drawing.Size(1212, 416);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "DELETE";
             this.tabPage4.UseVisualStyleBackColor = true;

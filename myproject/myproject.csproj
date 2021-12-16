@@ -51,8 +51,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Form1Model.cs" />
+    <Compile Include="Models\FormgraficModel.cs" />
     <Compile Include="Models\FormsensorModel.cs" />
     <Compile Include="Presenters\Form1Presenter.cs" />
+    <Compile Include="Presenters\FormgraficPresenter.cs" />
     <Compile Include="Presenters\FormsensorPresenter.cs" />
     <Compile Include="Views\Form1.cs">
       <SubType>Form</SubType>
@@ -87,6 +89,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\IForm1.cs" />
+    <Compile Include="Views\IFormgrafic.cs" />
     <Compile Include="Views\IFormsensor.cs" />
     <EmbeddedResource Include="Views\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

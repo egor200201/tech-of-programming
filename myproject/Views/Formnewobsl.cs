@@ -15,6 +15,12 @@ namespace myproject
 {
     public partial class Formnewobsl : MaterialForm
     {
+        static public int typeofact1;
+        static public int pressensor1;
+        static public int tempsensor1;
+        static public int moistsensor1;
+        static public int ratesensor1;
+        static public int elsensor1;
         SqlConnection sqlConnection;
         public Formnewobsl()
         {
@@ -38,7 +44,7 @@ namespace myproject
 
         private async void materialButton1_Click(object sender, EventArgs e)
         {
-
+            
             if (inmistake.Visible)
                 inmistake.Visible = false;
 
@@ -65,6 +71,53 @@ namespace myproject
 
                 inmistake.Text = "not enough information !";
             }
+
+        }
+
+        private void materialRadioButton5_CheckedChanged(object sender, EventArgs e)
+        {
+            typeofact1 = 1;
+
+        }
+
+        private void materialRadioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+        typeofact1 = 2;
+        }
+
+        private void materialRadioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+           typeofact1 = 3;
+
+        }
+
+        private void presureCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            
+           pressensor1 = 1;
+
+
+        }
+
+        private void tempCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            tempsensor1 = 1;
+
+        }
+
+        private void moisturerCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            moistsensor1 = 1;
+        }
+
+        private void ElCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            elsensor1 = 1;
+        }
+
+        private void rateCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            ratesensor1 = 1;
         }
     }
 }
