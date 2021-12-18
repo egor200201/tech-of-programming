@@ -122,7 +122,7 @@ namespace myproject.Models
             }
             if (elsensor == 1)
             { return el; }
-            else { return 36; }
+            else { return 10; }
         }
 
 

@@ -49,8 +49,8 @@ namespace myproject
                 inmistake.Visible = false;
 
             if (!string.IsNullOrEmpty(txtPatientname.Text) && !string.IsNullOrWhiteSpace(txtPatientname.Text) &&
-                !string.IsNullOrEmpty(txtPatientsurname.Text) && !string.IsNullOrWhiteSpace(txtPatientsurname.Text) &&
-                !string.IsNullOrEmpty(txtDate.Text) && !string.IsNullOrWhiteSpace(txtDate.Text))
+                !string.IsNullOrEmpty(txtPatientsurname.Text) && !string.IsNullOrWhiteSpace(txtPatientsurname.Text) 
+                )
             {
 
                 this.Hide(); // скрываем Form1 (this - текущая форма)
@@ -59,9 +59,10 @@ namespace myproject
                 SqlCommand command = new SqlCommand("INSERT INTO [Medicaldb] (Patientname, Patientsurname,Date)VALUES(@Patientname, @Patientsurname,@Date)", sqlConnection);
 
                 command.Parameters.AddWithValue("Patientname", txtPatientname.Text);
-
+                DateTime thisDay = DateTime.Today;
+                string Date = thisDay.ToString("d");
                 command.Parameters.AddWithValue("Patientsurname", txtPatientsurname.Text);
-                command.Parameters.AddWithValue("Date", txtDate.Text);
+                command.Parameters.AddWithValue("Date", Date);
 
                 await command.ExecuteNonQueryAsync();
             }
@@ -118,6 +119,18 @@ namespace myproject
         private void rateCheckbox_CheckedChanged(object sender, EventArgs e)
         {
             ratesensor1 = 1;
+        }
+
+     
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDate_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

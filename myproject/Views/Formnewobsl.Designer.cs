@@ -44,9 +44,10 @@
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.txtPatientsurname = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
-            this.txtDate = new MaterialSkin.Controls.MaterialTextBox();
             this.inmistake = new MaterialSkin.Controls.MaterialLabel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // materialLabel1
@@ -276,32 +277,6 @@
             this.txtPatientsurname.TabIndex = 17;
             this.txtPatientsurname.Text = "";
             // 
-            // materialLabel5
-            // 
-            this.materialLabel5.AutoSize = true;
-            this.materialLabel5.Depth = 0;
-            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel5.Location = new System.Drawing.Point(12, 319);
-            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel5.Name = "materialLabel5";
-            this.materialLabel5.Size = new System.Drawing.Size(32, 19);
-            this.materialLabel5.TabIndex = 18;
-            this.materialLabel5.Text = "date";
-            // 
-            // txtDate
-            // 
-            this.txtDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDate.Depth = 0;
-            this.txtDate.Font = new System.Drawing.Font("Roboto", 12F);
-            this.txtDate.Location = new System.Drawing.Point(209, 309);
-            this.txtDate.MaxLength = 50;
-            this.txtDate.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtDate.Multiline = false;
-            this.txtDate.Name = "txtDate";
-            this.txtDate.Size = new System.Drawing.Size(196, 50);
-            this.txtDate.TabIndex = 19;
-            this.txtDate.Text = "";
-            // 
             // inmistake
             // 
             this.inmistake.AutoSize = true;
@@ -315,6 +290,23 @@
             this.inmistake.Text = "materialLabel6";
             this.inmistake.Visible = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 324);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 20);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "age";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(209, 303);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 26);
+            this.numericUpDown1.TabIndex = 22;
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            // 
             // Formnewobsl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -322,9 +314,9 @@
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1236, 482);
+            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.inmistake);
-            this.Controls.Add(this.txtDate);
-            this.Controls.Add(this.materialLabel5);
             this.Controls.Add(this.txtPatientsurname);
             this.Controls.Add(this.materialLabel4);
             this.Controls.Add(this.materialButton1);
@@ -344,6 +336,7 @@
             this.Text = "Formnewobsl";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Formnewobsl_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -366,8 +359,8 @@
         private MaterialSkin.Controls.MaterialButton materialButton1;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
         private MaterialSkin.Controls.MaterialTextBox txtPatientsurname;
-        private MaterialSkin.Controls.MaterialLabel materialLabel5;
-        private MaterialSkin.Controls.MaterialTextBox txtDate;
         private MaterialSkin.Controls.MaterialLabel inmistake;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }

@@ -53,7 +53,6 @@
             this.bloodpresurechart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.skinmoisturechart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.hartratechart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.electricalconductivitychart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bloodpresurechart)).BeginInit();
@@ -225,22 +224,11 @@
             this.hartratechart.TabIndex = 13;
             this.hartratechart.Text = "chart1";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(531, 70);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // Formgrafic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1655, 817);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.hartratechart);
             this.Controls.Add(this.skinmoisturechart);
             this.Controls.Add(this.bloodpresurechart);
@@ -273,6 +261,5 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart bloodpresurechart;
         private System.Windows.Forms.DataVisualization.Charting.Chart skinmoisturechart;
         private System.Windows.Forms.DataVisualization.Charting.Chart hartratechart;
-        private System.Windows.Forms.Label label1;
     }
 }
